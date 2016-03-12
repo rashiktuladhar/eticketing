@@ -1,12 +1,26 @@
+@font-face {
+    font-family: 'source_sans_prolight';
+    src: url('../fonts/sourcesanspro-light-webfont.eot');
+    src: url('../fonts/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-light-webfont.woff2') format('woff2'),
+         url('../fonts/sourcesanspro-light-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-light-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 *
 {
 	margin:0 auto;
+	font-family: source_sans_prolight;
 }
 
 .ticketing-form
 {
 	margin-top: 60px;
-	width:800px;
+	width:800px !important;
 	-webkit-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
 	-moz-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
 	box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
@@ -30,6 +44,7 @@
 	padding-bottom: 5px;
 	font-size: 14px;
 	color:grey;
+	font-weight: 600;
 }
 
 .ticketing-form select, .ticketing-form input[type="date"], .ticketing-form input[type="date"]

@@ -6,121 +6,124 @@
 		<link rel="icon" href="images/logo.jpg">
 	</head>
 	<body>
-		
 		<section class="ticketing-form" id="ticketing-form">
-			<form action="post" action="javascript:void(0);">
-				<header><img src="images/logo.jpg" alt="Himalaya Airlines"></header>
-					<table>
-						<tr>
-							<td colspan="3">
-								<label for="type"><i class="fa fa-ticket"></i> Ticket Type</label>
-								<input type="radio" name="type" value="ONE"> One Way
-									<input type="radio" name="type" value="TWO"> Two Way
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label for="from"><i class="fa fa-plane"></i> From</label>
-								<select name="from" id="from">
-									<option value="">Select Your Place</option>
-									<option value="NP">Nepal</option>
-									<option value="IN">India</option>
-									<option value="AU">Australia</option>
-								</select>
-							</td>
-							<td>
-								<label for="to"><i class="fa fa-plane"></i> To</label>
-								<select name="to" id="to">
-									<option value="">Select Your Place</option>
-									<option value="NP">Nepal</option>
-									<option value="IN">India</option>
-									<option value="AU">Australia</option>
-								</select>
-							</td>
-						</tr>
-
-
-						<tr>
-							<td>
-								<label for="from"><i class="fa fa-calendar-check-o"></i> Departure Date</label>
-								<input type="date" id="departure-date" name="departure-date" required="required">
-							</td>
-							<td id="arrival-date-row">
-								<label for="from"><i class="fa fa-calendar-check-o"></i> Arrival Date</label>
-								<input type="date" id="arrival-date" name="arrival-date" required="required">
-							</td>
-							<td>
-								<label for="class"><i class="fa fa-gg"></i> Ticket Class</label>
-								<select name="class" id="class">
-									<option value="">Select Your Class</option>
-									<option value="ECO">Economic</option>
-									<option value="FIR">First Class</option>
-								</select>
-							</td>
-						</tr>
-
-
-						<tr>
-							<td>
-								<label for="adult"><i class="fa fa-users"></i> No. of Adults</label>
-								<select name="adult" id="adult">
-									<option value="">Number of Adults</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-								</select>
-							</td>
-							<td>
-								<label for="child"><i class="fa fa-user"></i> No. of Children</label>
-								<select name="child" id="child">
-									<option value="">Number of Children</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-								</select>
-							</td>
-							<td>
-								<label for="child"><i class="fa fa-child"></i> No. of Infant</label>
-								<select name="infant" id="infant">
-									<option value="">Number of Infants</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-								</select>
-							</td>
-						</tr>
-					</table>
+			<header><img src="images/logo.jpg" alt="Himalaya Airlines"></header>
+			<form name="ajaxform" id="ajaxform" action="#" method="POST">
+				<table>
+					<tr>
+						<td colspan="3">
+							<label for="type"><i class="fa fa-ticket"></i> Ticket Type</label>
+							<input type="radio" name="type" value="ONE" checked="checked"> One Way
+							<input type="radio" name="type" value="TWO"> Two Way
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="from"><i class="fa fa-plane"></i> From</label>
+							<select name="from" id="from">
+								<option value="">Select Your Place</option>
+								<option value="NP">Nepal</option>
+								<option value="IN">India</option>
+								<option value="AU">Australia</option>
+							</select>
+						</td>
+						<td>
+							<label for="to"><i class="fa fa-plane"></i> To</label>
+							<select name="to" id="to">
+								<option value="">Select Your Place</option>
+								<option value="NP">Nepal</option>
+								<option value="IN">India</option>
+								<option value="AU">Australia</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="from"><i class="fa fa-calendar-check-o"></i> Departure Date</label>
+							<input type="date" id="departure-date" name="departure-date" required="required">
+						</td>
+						<td id="arrival-date-row">
+							<label for="from"><i class="fa fa-calendar-check-o"></i> Arrival Date</label>
+							<input type="date" id="arrival-date" name="arrival-date" required="required">
+						</td>
+						<td id="ticket-class-row">
+							<label for="class"><i class="fa fa-gg"></i> Ticket Class</label>
+							<select name="class" id="class">
+								<option value="">Select Your Class</option>
+								<option value="ECO">Economic</option>
+								<option value="FIR">First Class</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="adult"><i class="fa fa-users"></i> No. of Adults</label>
+							<select name="adult" id="adult">
+								<option value="">Number of Adults</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</td>
+						<td>
+							<label for="child"><i class="fa fa-user"></i> No. of Children</label>
+							<select name="child" id="child">
+								<option value="">Number of Children</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</td>
+						<td>
+							<label for="child"><i class="fa fa-child"></i> No. of Infant</label>
+							<select name="infant" id="infant">
+								<option value="">Number of Infants</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</td>
+					</tr>
+				</table>
 				<footer>
 					<label for="help-text" class="help-text">Instruction: Press The Search Button To Search For Your Flight</label>
-					<input type="submit" name="search" id="search" value="&#xf002;"></input>
+					<input type="submit" name="search-flight" id="search-flight" value="&#xf002;">
 				</footer>
 			</form>
 		</section>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
-		<script type="text/javascript">
-
-			$(document).ready(function(){
-		    alert("hello");
-});
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		
 
 
-
-		$(document).ready(function(){
-			alert("hello");
-			$("#arrival-date-row").hide();
-			$('input[type="radio"]').click(function(){
-			        if($(this).attr("value")=="TWO"){
-			            $("td#arrival-date-row").show();
-			        }
-			        else
-			        {
-			        	$("td#arrival-date-row").hide();
-			        }
-			    });
+		$("#arrival-date-row").hide();
+		$('input[type="radio"]').click(function(){
+		if($(this).attr("value")=="TWO"){
+			$("td#ticket-class-row").hide('fast', function() {
+				$("td#arrival-date-row").show('slow', function() {
+					$("td#ticket-class-row").show('fast');
+				});
+			});
+		}
+		else
+		{
+			$("td#ticket-class-row").hide('fast');
+				$("td#arrival-date-row").hide('slow', function() {
+					$("td#ticket-class-row").show('fast');
+				});
+		}
 		});
-			
 
-		</script>
-	</body>
+
+		$("#ajaxform").submit(function(event) {
+			alert();
+		});
+
+
+	});
+
+	</script>
+</body>
 </html>
