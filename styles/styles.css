@@ -1,0 +1,83 @@
+*
+{
+	margin:0 auto;
+}
+
+.ticketing-form
+{
+	margin-top: 60px;
+	width:800px;
+	-webkit-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+	-moz-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+	box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+}
+
+.ticketing-form header
+{
+	background:#FFF;
+}
+
+.ticketing-form header img
+{
+	margin-left: 20px;
+	width:20%;
+}
+
+.ticketing-form label
+{
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	font-size: 14px;
+	color:grey;
+}
+
+.ticketing-form select, .ticketing-form input[type="date"], .ticketing-form input[type="date"]
+{
+	height:40px;
+	width:250px;
+	font-size: 14px;
+	box-shadow: none !important;
+}
+
+.ticketing-form select
+{
+	background: none;
+}
+
+.ticketing-form footer
+{
+	height:80px;
+	width:95%;
+	position:relative;
+	margin-top: 20px;
+}
+
+.ticketing-form footer .help-text
+{
+	position:absolute;
+}
+
+.ticketing-form footer input[type="submit"]
+{
+	height:50px;
+	width:50px;
+	border-radius: 40px;
+	font-size: 14px;
+	right: 0px;
+	font-family: FontAwesome;
+	position: absolute;
+	border:none;
+	color:#FFF;
+	background-color: #4CAF50;
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
+	-ms-transition:all 1s;
+}
+
+.ticketing-form footer input[type="submit"]:hover
+{
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #449D44;
+}
