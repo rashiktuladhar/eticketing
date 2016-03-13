@@ -25,6 +25,15 @@
 .float-right{float:right;}
 .grey-background {background-color: grey;}
 .white-color{color:#FFF;}
+.tooltip-holder 
+{
+	right:20px;
+    position: absolute;
+    text-align: center;
+    padding:20px;
+    background:rgba(0,0,0,0.3);
+    color:#FFF;
+}
 
 .back-ticketing-form, .click-home
 {
