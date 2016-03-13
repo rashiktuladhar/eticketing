@@ -88,7 +88,7 @@
 					</table>
 					<footer>
 						<label for="help-text" class="help-text">Instruction: Press The Search Button To Search For Your Flight</label>
-						<input type="submit" name="search-flight" id="search-flight" value="&#xf002;">
+						<input type="button" name="search-flight" id="search-flight" value="&#xf002;">
 					</footer>
 				</form>
 			</article>
@@ -100,6 +100,7 @@
 
 
 		<section class="ticketing-table" id="ticketing-table">
+			<input type="button" id="back-ticketing-form" class="back-ticketing-form" value="&#xf060;">
 			<header>
 				<article class="search-terms">Berlin (BER) - Singapore (SIN)</article>
 				<article class="search-date"><i class="fa fa-calendar"></i> Sunday 15 March - Tuesday 18 March</article>
@@ -136,7 +137,7 @@
 						<section class="flight-price">
 							<i class="fa fa-money"></i> $15,000
 						</section>
-						<button type="submit">Book Now</button>
+						<button type="button" class="book-now">Book Now</button>
 					</td>
 				</tr>
 				
@@ -165,7 +166,7 @@
 						<section class="flight-price">
 							<i class="fa fa-money"></i> $15,000
 						</section>
-						<button type="submit">Book Now</button>
+						<button type="button" class="book-now">Book Now</button>
 					</td>
 				</tr>
 			</table>
@@ -203,7 +204,7 @@
 					</table>
 					<footer>
 						<label for="help-text" class="help-text">Instruction: Press The Plane Button To Book Your Flight</label>
-						<input type="submit" name="ticket-book" id="ticket-book" value="&#xf072;">
+						<input type="button" name="ticket-book" id="ticket-book" value="&#xf072;">
 					</footer>
 				</form>
 			</article>
@@ -233,19 +234,44 @@
 			</article>
 
 			<article class="plane-details">
-				<table border="1">
+				<table>
 					<tr>
-						<td rowspan="2"></td>
-						<td colspan="2">
-							<h2 class="float-left">KTM<br><small>KATHMANDU, NEPAL</small></h2>
-							<h2 class="float-right">KTM<br><small>KATHMANDU, NEPAL</small></h2>
-							<div class="clearfix"></div>
+						<td rowspan="2">
+						<h3>JET AIRWAYS<br>9W0326</h3><br>
+						<p>Duration: 1hr(s) 45min(s)</p>
 						</td>
-						<td rowspan="2"></td>
+						<td>
+							<h2>BERLIN<br><small>BERLIN, GERMANY</small></h2>
+						</td>
+						<td>
+							<h2>SINGAPORE<br><small>SINGAPORE, SINGAPORE</small></h2>
+						</td>
+						<td rowspan="2">
+							<p>Air Craft:</p>
+							<p>BOEING 737 - 800 JET</p>
+							<p>DISTANCE IN MILES : 507</p>
+							<p>STOPS : 0</p>
+						</td>
 					</tr>
 					<tr>
 						<td>DEPARTING AT<br>4H 50M</td>
 						<td>ARRIVING AT<br>1H 15M</td>
+					</tr>
+				</table>
+				<table>
+					<tr class="grey-background white-color">
+						<td>Passenger Name</td>
+						<td>No. of Seats</td>
+						<td>Class</td>
+						<td>Status</td>
+						<td>Meals</td>
+					</tr>
+					<tr>
+						<td>Rashik Tuladhar</td>
+						<td>Check - In Required</td>
+						<td>ECONOMY</td>
+						<td>CONFIRMED</td>
+						<td>BREAKFAST</td>
 					</tr>
 				</table>
 			</article>
@@ -254,6 +280,7 @@
 				<label for="help-text" class="help-text">Instruction: Press The Plane Button To Book Your Flight</label>
 				<button name="ticket-book" id="ticket-book"><i class="fa fa-print"></i></button>
 			</footer>
+			<input type="button" id="click-home" class="click-home" value="&#xf015;">
 		</section>
 
 
@@ -266,10 +293,13 @@
 	$(document).ready(function(){
 		
 
-		//$("#ticketing-form").hide();
-
 		$("#arrival-date-row").hide();
-		$("#search-result").hide();
+
+		$("#ticketing-table").hide();
+		$("#ticketing-person-details").hide();
+		$("#print-ticket").hide();
+
+
 		$('input[type="radio"]').click(function(){
 		if($(this).attr("value")=="TWO"){
 			$("#ticket-class-row").hide('fast', function() {
@@ -286,6 +316,39 @@
 				});
 		}
 		});
+
+		$("#click-home").click(function() {
+			location.reload();
+		});
+
+
+
+
+		$("#search-flight").click(function() {
+			$("#ticketing-form").hide('4000', function() {
+				$("#ticketing-table").show('4000');
+			});
+		});
+
+		$("#back-ticketing-form").click(function(event) {
+			$("#ticketing-table").fadeOut('4000', function() {
+				$("#ticketing-form").fadeIn('fast');
+			});
+		});
+
+		$(".book-now").click(function() {
+			$("#ticketing-table").hide('4000', function() {
+				$("#ticketing-person-details").show('4000');
+			});
+		});
+
+		$("#ticket-book").click(function() {
+			$("#ticketing-person-details").hide('4000', function() {
+				$("#print-ticket").show('4000');
+			});
+		});
+
+
 	});
 
 	</script>

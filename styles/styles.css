@@ -23,7 +23,25 @@
 .text-center{text-align: center !important;}
 .float-left{float:left;}
 .float-right{float:right;}
+.grey-background {background-color: grey;}
+.white-color{color:#FFF;}
 
+.back-ticketing-form, .click-home
+{
+	margin:5px;
+	height:50px;
+	width:50px;
+	border-radius: 40px;
+	font-size: 20px;
+	font-family: FontAwesome;
+	border:none;
+	color:#FFF;
+	background-color: #4CAF50;
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
+	-ms-transition:all 1s;
+	cursor:pointer;
+}
 
 button
 {
@@ -99,7 +117,7 @@ button:hover
 	position:absolute;
 }
 
-.ticketing-form footer input[type="submit"]
+.ticketing-form footer input[type="submit"],.ticketing-form footer input[type="button"]
 {
 	height:50px;
 	width:50px;
@@ -116,7 +134,7 @@ button:hover
 	-ms-transition:all 1s;
 }
 
-.ticketing-form footer input[type="submit"]:hover
+.ticketing-form footer input[type="submit"]:hover,.ticketing-form footer input[type="button"]:hover
 {
 	font-size: 20px;
 	cursor: pointer;
@@ -290,7 +308,7 @@ button:hover
 	box-shadow: none !important;
 }
 
-.ticketing-person-details footer input[type="submit"]
+.ticketing-person-details footer input[type="button"]
 {
 	height:50px;
 	width:50px;
@@ -307,7 +325,7 @@ button:hover
 	-ms-transition:all 1s;
 }
 
-.ticketing-person-details footer input[type="submit"]:hover
+.ticketing-person-details footer input[type="button"]:hover
 {
 	font-size: 20px;
 	cursor: pointer;
