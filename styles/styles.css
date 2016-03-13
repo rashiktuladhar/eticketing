@@ -17,6 +17,28 @@
 	font-family: source_sans_prolight;
 }
 
+
+
+.clearfix{clear:both;}
+.text-center{text-align: center !important;}
+button
+{
+	border:none;
+	padding:10px;
+	background:#449D44;
+	color:#FFF;
+	-webkit-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+	-moz-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+	box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+}
+button:hover
+{
+	cursor:pointer;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
 .ticketing-form
 {
 	margin-top: 60px;
@@ -95,4 +117,101 @@
 	font-size: 20px;
 	cursor: pointer;
 	background-color: #449D44;
+}
+
+
+
+
+
+
+
+.ticketing-table
+{
+	margin-top: 60px;
+	width:800px !important;
+	-webkit-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+	-moz-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+	box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+}
+
+
+.ticketing-table header
+{
+	color:grey;
+	padding: 20px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.ticketing-table header .search-terms
+{
+	float: left;
+}
+
+.ticketing-table header .search-date
+{
+	float:right;
+}
+
+.ticketing-table table
+{
+	margin-top: 20px;
+	width:750px;
+}
+
+.ticketing-table table thead
+{
+	text-align: left;
+}
+
+.ticketing-table table>tr
+{
+	border-bottom: 1px solid red;
+}
+
+
+
+
+
+.ticketing-table section.flight-date-details .calendar-icon
+{
+	font-size: 50px;
+	color:grey;
+}
+
+.ticketing-table section.flight-date-details .calendar-details
+{
+	font-size: 14px;
+	color:grey;
+	padding-top:10px;
+}
+
+
+.ticketing-table section.logo-placeholder
+{
+	float:left;
+}
+
+.ticketing-table section.logo-placeholder img
+{
+	width:120px;
+}
+
+.ticketing-table section.flight-details
+{
+	padding: 10px;
+	float:left;
+	margin-left: 10px;
+}
+
+.ticketing-table section.flight-details .flight-transit
+{
+	margin-left: 5px;
+	padding: 2px;
+}
+
+
+.ticketing-table section.flight-price
+{
+	font-size: 30px;
+	color:grey;
 }
