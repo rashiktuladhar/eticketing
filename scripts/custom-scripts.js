@@ -18,8 +18,10 @@ $(document).ready(function(){
 
 		//utility function created
 		$.notifyError= function(msg){
+			$(".submit-button").attr('disabled', 'disabled');
 			return $(".error-msg-holder").fadeIn(1000).append("<span class='tooltip-error'>"+ msg +"</span>").delay(4000).fadeOut('fast', function() {
 				 $(".error-msg-holder").fadeOut();
+				 $(".submit-button").removeAttr('disabled');
 				$(".tooltip-error").remove();
 			});
 		}
