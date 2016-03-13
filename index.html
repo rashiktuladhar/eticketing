@@ -96,6 +96,9 @@
 
 
 
+
+
+
 		<section class="ticketing-table" id="ticketing-table">
 			<header>
 				<article class="search-terms">Berlin (BER) - Singapore (SIN)</article>
@@ -103,17 +106,19 @@
 				<div class="clearfix"></div>
 			</header>
 			<table>
+
 				<thead>
 					<th>Date And Time</th>
 					<th>Flight Details</th>
 					<th>Book Now</th>
 				</thead>
-				<tr>
+
+				<tr class="flight-list-each">
 					<td>
 						<section class="flight-date-details">
 							<article class="calendar-icon"><i class="fa fa-calendar"></i></article>
 							<article class="calendar-details">
-								<i class="fa fa-calendar"></i> Sunday 15 March, 2016 <br>
+								<i class="fa fa-calendar"></i> 15<sup>th</sup> March, 2016 <br>
 								<i class="fa fa-clock-o"></i> 4H 00M 
 							</article>
 						</section>
@@ -134,13 +139,15 @@
 						<button type="submit">Book Now</button>
 					</td>
 				</tr>
-				<br>
-				<tr>
+				
+				<div class="clearfix"></div>
+
+				<tr class="flight-list-each">
 					<td>
 						<section class="flight-date-details">
 							<article class="calendar-icon"><i class="fa fa-calendar"></i></article>
 							<article class="calendar-details">
-								<i class="fa fa-calendar"></i> Sunday 15 March, 2016 <br>
+								<i class="fa fa-calendar"></i> 20<sup>th</sup> March, 2016 <br>
 								<i class="fa fa-clock-o"></i> 4H 00M 
 							</article>
 						</section>
@@ -167,12 +174,99 @@
 
 
 
+
+		<section class="ticketing-person-details" id="ticketing-person-details">
+			<header><img src="images/logo.jpg" alt="Himalaya Airlines"></header>
+			<article class="person-details-form">
+				<form name="person-details-form" id="person-details-form" method="POST">
+					<table>
+						<tr>
+							<td>
+								<label for="full-name"><i class="fa fa-user"></i> Full Name</label>
+								<input type="text" id="full-name" name="full-name" placeholder=" Full Name">
+							</td>
+							<td>
+								<label for="address"><i class="fa fa-map-marker"></i> Address</label>
+								<input type="text" id="address" name="address" placeholder=" Address">
+							</td>
+							<td>
+								<label for="contact-no"><i class="fa fa-phone"></i> Contact No</label>
+								<input type="text" id="contact-no" name="contact-no" placeholder=" Contact Number">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="passport-no"><i class="fa fa-ticket"></i> Passport Number</label>
+								<input type="text" id="passport-no" name="passport-no" placeholder=" Passport Number">
+							</td>
+						</tr>
+					</table>
+					<footer>
+						<label for="help-text" class="help-text">Instruction: Press The Plane Button To Book Your Flight</label>
+						<input type="submit" name="ticket-book" id="ticket-book" value="&#xf072;">
+					</footer>
+				</form>
+			</article>
+		</section>
+
+
+
+
+		
+		<section class="print-ticket" id="print-ticket">
+			<header>
+				<article class="ticket-source-destination float-left">Berlin (BER) - Singapore (SIN)</article>
+				<article class="ticket-date float-right"><i class="fa fa-calendar"></i> Sunday 15 March - Tuesday 18 March</article>
+				<div class="clearfix"></div>
+			</header>
+			<article class="passenger-details">
+				<label>Prepared For</label>
+				<p>Rashik Tuladhar</p>
+			</article>
+			<article class="passenger-flight-details">
+				<p>RESERVATION CODE: <span>mQ105</span></p>
+				<p>AIRLINE RESERVATION CODE: <span>45678</span></p>
+			</article>
+
+			<article class="passenger-flight-date">
+				<p><i class="fa fa-plane"></i> DEPARTURE: WEDNESDAY 30 MAR <small>please verify flight times prior to departure.</small></p>
+			</article>
+
+			<article class="plane-details">
+				<table border="1">
+					<tr>
+						<td rowspan="2"></td>
+						<td colspan="2">
+							<h2 class="float-left">KTM<br><small>KATHMANDU, NEPAL</small></h2>
+							<h2 class="float-right">KTM<br><small>KATHMANDU, NEPAL</small></h2>
+							<div class="clearfix"></div>
+						</td>
+						<td rowspan="2"></td>
+					</tr>
+					<tr>
+						<td>DEPARTING AT<br>4H 50M</td>
+						<td>ARRIVING AT<br>1H 15M</td>
+					</tr>
+				</table>
+			</article>
+
+			<footer>
+				<label for="help-text" class="help-text">Instruction: Press The Plane Button To Book Your Flight</label>
+				<button name="ticket-book" id="ticket-book"><i class="fa fa-print"></i></button>
+			</footer>
+		</section>
+
+
+
+
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
 		
 
-		$("#ticketing-form").hide();
+		//$("#ticketing-form").hide();
 
 		$("#arrival-date-row").hide();
 		$("#search-result").hide();
@@ -192,10 +286,7 @@
 				});
 		}
 		});
-
-
 	});
-
 
 	</script>
 </body>
