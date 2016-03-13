@@ -1,5 +1,45 @@
 $(document).ready(function(){
+
+
+		//hide all the sections except the first form
+		$("#arrival-date-row").hide();
+		$("#ticketing-table").hide();
+		$("#ticketing-person-details").hide();
+		$("#print-ticket").hide();
+		$(".tooltip-holder").hide();
+		$(".error-msg-holder").hide();
+
+
+		//add css using jquery 
+		$("#system-title").css({
+			'font-size': '30px',
+			'padding' : '40px',
+			'color' : '#8D0204'
+		});
+
+
+		$("#logo-img").notify("Himalaya Airlines");
+
+
+		//one way two way flight determination
+		$('input[type="radio"]').click(function(){
+		if($(this).attr("value")=="TWO"){
+			$("#ticket-class-row").hide('fast', function() {
+				$("#arrival-date-row").show('slow', function() {
+					$("#ticket-class-row").show('fast');
+				});
+			});
+			}
+		else
+			{
+			$("#ticket-class-row").hide('fast');
+				$("#arrival-date-row").hide('slow', function() {
+					$("#ticket-class-row").show('fast');
+				});
+			}
+		});
 	
+
 		//tool tips show
 		function showToolTip()
 		{
@@ -42,51 +82,6 @@ $(document).ready(function(){
 				}
 			});
 		}
-
-
-		//hide all the sections except the first form
-		$("#arrival-date-row").hide();
-		$("#ticketing-table").hide();
-		$("#ticketing-person-details").hide();
-		$("#print-ticket").hide();
-		$(".tooltip-holder").hide();
-		$(".error-msg-holder").hide();
-
-
-		//add css using jquery 
-		$("#system-title").css({
-			'font-size': '30px',
-			'padding' : '40px',
-			'color' : '#8D0204'
-		});
-
-
-		$("#logo-img").notify("Himalaya Airlines");
-		// $("#search-flight").bind({
-		// 	mouseenter: showToolTip,
-		// 	mouseleave: hideToolTip
-		// });
-
-
-
-		//one way two way flight determination
-		$('input[type="radio"]').click(function(){
-		if($(this).attr("value")=="TWO"){
-			$("#ticket-class-row").hide('fast', function() {
-				$("#arrival-date-row").show('slow', function() {
-					$("#ticket-class-row").show('fast');
-				});
-			});
-		}
-		else
-		{
-			$("#ticket-class-row").hide('fast');
-				$("#arrival-date-row").hide('slow', function() {
-					$("#ticket-class-row").show('fast');
-				});
-		}
-		});
-
 
 
 		// Go Back To The Home
