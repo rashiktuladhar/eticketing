@@ -7,9 +7,11 @@
 	</head>
 	<body>
 		<span class="tooltip-holder"></span>
+		<span class="error-msg-holder"></span>
+
 		<section class="ticketing-form" id="ticketing-form">
 			<header>
-				<img src="images/logo.jpg" alt="Himalaya Airlines" class="float-left">
+				<img src="images/logo.jpg" alt="Himalaya Airlines" class="float-left" id="logo-img">
 				<p id="system-title" class="float-right">E-Ticketing System</p>
 				<div class="clearfix"></div>
 			</header>
@@ -75,6 +77,7 @@
 								<label for="child"><i class="fa fa-user"></i> No. of Children</label>
 								<select name="child" id="child">
 									<option value="">Number of Children</option>
+									<option value="0">0</option>
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
@@ -84,6 +87,7 @@
 								<label for="child"><i class="fa fa-child"></i> No. of Infant</label>
 								<select name="infant" id="infant">
 									<option value="">Number of Infants</option>
+									<option value="0">0</option>
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
